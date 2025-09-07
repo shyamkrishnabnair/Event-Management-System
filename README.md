@@ -1,50 +1,61 @@
-# Event Management System
-This is an assignment covering DB schema, API design and workflows
+# Event Management System  
 
-I began by understanding what the project is-
+This is an assignment covering DB schema, API design and workflows.  
 
-1- An Admin Portal
-2- A Student App
-3- Database with required tables 
+---
 
-ASSUMPTIONS:
+## Project Understanding  
+I began by understanding what the project is:  
 
-Multiple colleges with multiple events 
-Only single registration to single event by a single student 
-Attendance will be marked only for registered students
-Only Attended students can give feedback 
+1. An Admin Portal  
+2. A Student App  
+3. Database with required tables  
 
-Decisons:
+---
 
-Prevent Duplicate Events and Student Registrations 
-MySQL as Database and Flask as backend
-Data Model with required tables
+## Assumptions  
+- Multiple colleges with multiple events  
+- Only single registration to a single event by a single student  
+- Attendance will be marked only for registered students  
+- Only attended students can give feedback  
 
-Then came schema design where i decided we'll have a college table and student table for college and students respectively, the college_id and student_id would be unique
+---
 
-Proceeded with an Events table which would be linked to college via college_id 
+## Decisions  
+- Prevent duplicate events and student registrations  
+- MySQL as database and Flask as backend  
+- Data model with required tables  
 
-A Registration table to handle registrations and attendance 
-A Feedback table to handle feedbacks easily 
+---
 
-Moving on I layed out the API endpoints-
+## Schema Design  
+- A **College table** and **Student table** for college and students respectively, with `college_id` and `student_id` as unique identifiers.  
+- An **Events table** linked to college via `college_id`.  
+- A **Registration table** to handle registrations and attendance.  
+- A **Feedback table** to handle feedback easily.  
 
-ADMIN PORTAL:
+---
 
-Post    - Create events 
-Get     - View Events
-Put     - Update Events
-Delete  - Remove Events
+## API Endpoints  
 
+### Admin Portal  
+- **POST** – Create events  
+- **GET** – View events  
+- **PUT** – Update events  
+- **DELETE** – Remove events  
 
-STUDENT APP:
+### Student App  
+- **POST** – Register to event, feedback if marked present  
+- **GET** – View events  
+- **DELETE** – Withdraw registration  
 
-Post    - Register to Event, Feedback if marked Present 
-Get     - View Events 
-Delete  - Withdraw Registration  
+---
 
-Once this was complete a Workflow Diagram was made to demonstrate flow of events
+## Workflow  
+Once this was complete, a workflow diagram was made to demonstrate the flow of events.  
 
-A prototype code was generated to show working of this system and API endpoints utilising MySQL as Database and Postman to view them 
-A reporting mechanism was also implemented using QUERIES
+---
 
+## Prototype Implementation  
+- A prototype code was generated to show working of this system and API endpoints, utilizing **MySQL** as database and **Postman** to view them.  
+- A reporting mechanism was also implemented using queries.  
